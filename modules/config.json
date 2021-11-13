@@ -1,0 +1,17 @@
+{
+  "PROJECT_NAME": "antibodies-structure-prediction",
+  "EMBEDDINGS_NAME": "normal",
+  "PATH_TO_PRETRAINED_EMBEDDING_MODEL": "../data/embedding/pretrained_models/ssa_L1_100d_lstm3x512_lm_i512_mb64_tau0.5_lambda0.1_p0.05_epoch100.sav",
+  "PATH_TO_SEQ_DATA": "../data/cdr_h3_seq_train",
+  "PATH_TO_COORD_DATA": "../data/cdr_h3_coord_train",
+  "PATH_TO_SEQ_EMBEDDED": "../data/",
+  "PATH_TO_COORD_EMBEDDED": "../results/coord_data_emb",
+  "PATH_TO_FINISHED_TRAINING_SIMPLEMODEL": "../results/finished_training_simplemodel.txt",
+  "PATH_TO_FINISHED_TRAINING_SIMPLEMODEL_COORD": "../results/finished_training_simplemodel_coord.txt",
+  "PATH_TO_SIMPLEMODEL_BACKUP": "../results/simplemodel_backup",
+  "PATH_TO_SIMPLEMODEL_COORD_BACKUP": "../results/models_backups/",
+  "PATH_TO_TEST_RESULTS": "../results/test_results/",
+  "PATH_TO_TEST_DATASET_IDS": "../data/test_ids",
+  "NUM_EPOCH_BEFORE_BACKUP": 5,
+  "PATH_TO_DEBUG_LOG": "model.log"
+}
