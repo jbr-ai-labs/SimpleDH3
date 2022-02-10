@@ -11,8 +11,7 @@ import tensorflow as tf
 import models.simple_architecture.data_utils as data_utils
 import models.simple_architecture.train_utils as train_utils
 from config_loader import load_config
-from models.simple_architecture.model import SimpleRNN, SimpleCharRNNUnit, SimpleCNN, SimpleCharRNN, SimpleRNNSphere, \
-    PSEModel, rescale_prediction
+from models.simple_architecture.model import SimpleCharRNNUnit, SimpleCNN, SimpleCharRNN, rescale_prediction
 from models.simple_architecture.data_utils import Embedding
 from metrics.metric import distance_between_atoms, angles_between_atoms, torsion_angles_between_atoms
 
