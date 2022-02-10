@@ -6,7 +6,6 @@
   "PATH_TO_COORD_DATA": "../data/cdr_h3_coord_train",
   "PATH_TO_SEQ_EMBEDDED": "../data/",
   "PATH_TO_COORD_EMBEDDED": "../results/coord_data_emb",
-  "PATH_TO_FINISHED_TRAINING_SIMPLEMODEL": "../results/finished_training_simplemodel.txt",
   "PATH_TO_FINISHED_TRAINING_SIMPLEMODEL_COORD": "../results/finished_training_simplemodel_coord.txt",
   "PATH_TO_SIMPLEMODEL_BACKUP": "../results/simplemodel_backup",
   "PATH_TO_SIMPLEMODEL_COORD_BACKUP": "../results/models_backups/",
