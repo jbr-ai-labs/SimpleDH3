@@ -23,10 +23,7 @@ if __name__ == '__main__':
         elif config["EMBEDDINGS_NAME"] == EMBEDDINGS_NAMES[2]:
             seq = get_embeddings_esm(config["PATH_TO_SEQ_DATA"])
             torch.save(seq, config["PATH_TO_SEQ_EMBEDDED"] + 'cdr_h3_seq_esm')
-        # angles = get_angles(config["PATH_TO_ANGLES_DATA"])
         coord = get_coordinates(config["PATH_TO_COORD_DATA"])
-        # with open(config["PATH_TO_ANGLES_EMBEDDED"], "wb") as angles_file:
-        #     pickle.dump(angles, angles_file, protocol=pickle.HIGHEST_PROTOCOL)
         with open(config["PATH_TO_COORD_EMBEDDED"], "wb") as coord_file:
             pickle.dump(coord, coord_file, protocol=pickle.HIGHEST_PROTOCOL)
 
