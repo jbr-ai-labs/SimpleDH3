@@ -17,17 +17,6 @@ from metrics.metric import distance_between_atoms, angles_between_atoms, torsion
 
 MODEL_NAME = 'simple-coordinates'
 
-
-def correct_coordinates(coordinates):
-    coordinates_l = list(coordinates.unbind(0))
-    for i, c in enumerate(coordinates_l):
-        c = c.view(-1, 3)
-        coordinates_l[i] = rescale_prediction(c).view(25, 9)
-    coordinates = torch.stack(coordinates_l)
-
-    return coordinates
-
-
 class DistanceLoss(nn.Module):
     def __init__(self, on_cpu):
         super().__init__()
