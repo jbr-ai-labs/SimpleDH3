@@ -77,7 +77,7 @@ BATCH_SIZE = 500
 
 def load_test_data_to_dataloader(args):
     config = load_config()
-    seq, coordinates = get_sequence_data(config["PATH_TO_SEQ_EMBEDDED"] + 'cdr_h3_seq_' + config['EMBEDDINGS_NAME'], config['PATH_TO_COORD_EMBEDDED'], config['EMBEDDINGS_NAME'])
+    seq, coordinates = get_sequence_data(config["PATH_TO_SEQ_EMBEDDED"] + 'cdr_h3_seq_test_' + config['EMBEDDINGS_NAME'], config['PATH_TO_COORD_EMBEDDED'] + 'test', config['EMBEDDINGS_NAME'])
     ids = []
     with open(args['test_data_ids_path'], 'r') as file:
         for line in file.readlines():
@@ -90,8 +90,8 @@ def load_test_data_to_dataloader(args):
 
 def load_test_k_data_to_dataloader(k_folds):
     config = load_config()
-    seq, coordinates = get_sequence_data(config["PATH_TO_SEQ_EMBEDDED"] + 'cdr_h3_seq_' + config['EMBEDDINGS_NAME'],
-                                         config['PATH_TO_COORD_EMBEDDED'], config['EMBEDDINGS_NAME'])
+    seq, coordinates = get_sequence_data(config["PATH_TO_SEQ_EMBEDDED"] + 'cdr_h3_seq_test_' + config['EMBEDDINGS_NAME'],
+                                         config['PATH_TO_COORD_EMBEDDED'] + 'test', config['EMBEDDINGS_NAME'])
     kfold = KFold(n_splits=k_folds, shuffle=True)
     full_data = get_full_data_coordinates(seq, coordinates)
     full_data = get_unique_data_points(full_data)
